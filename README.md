@@ -1,5 +1,7 @@
 # airbnb-clone-project
-Alx FE and BE Project Prep.
+Please my README.ME file contains FE and BE documentation, so if you are reviewing for the Backend, kindly scroll down to see it, it is immediately after the FE Doc.
+I am sorry for the inconvenience, Thank you!
+
 # 🏠 StayEase: Airbnb Clone Project
 
 ### Overview
@@ -155,3 +157,155 @@ Future stages will involve implementing the frontend in React, integrating APIs,
 **Course:** ProDev Frontend  
 
 > “Blending creativity and code to craft meaningful digital experiences.”
+
+---------------FRONTEND DOCUMENTATION ENDS HERE-----------
+
+
+
+Backend Documentation begins here, THANK YOU!
+
+# 🏡 Airbnb Clone Project
+
+## 📘 Project Overview
+The **Airbnb Clone Project** is a full-stack web application designed to replicate the core functionality of Airbnb — allowing users to list, discover, and book properties online.  
+This project focuses on **backend architecture**, **database design**, and **API security**, giving learners real-world experience in building scalable, secure, and collaborative software systems.
+
+**🎯 Project Goals:**
+- Build a scalable backend for property booking.
+- Implement secure and efficient API systems.
+- Collaborate through GitHub workflows and CI/CD pipelines.
+
+---
+
+## 👥 Team Roles
+
+| Role | Description |
+|------|--------------|
+| **Backend Developer** | Designs and implements server-side logic using Django. Manages APIs and integrates frontend requests with backend responses. |
+| **Database Administrator (DBA)** | Designs and maintains the relational database. Ensures data integrity, optimization, and backup. |
+| **DevOps Engineer** | Sets up and maintains CI/CD pipelines, manages Docker containers, and ensures smooth deployment. |
+| **Project Manager** | Oversees project progress, manages timelines, and ensures team collaboration and task alignment. |
+| **QA Engineer** | Tests API endpoints, verifies data integrity, and ensures features meet acceptance criteria. |
+
+---
+
+## ⚙️ Technology Stack
+
+| Technology | Purpose |
+|-------------|----------|
+| **Django** | Web framework used for building the backend and RESTful APIs. |
+| **PostgreSQL / MySQL** | Relational database used to store application data (users, listings, bookings). |
+| **GraphQL** | API query language for optimized data fetching and flexibility in client requests. |
+| **Docker** | Containerization tool for consistent development and deployment environments. |
+| **GitHub Actions** | CI/CD automation tool for running tests, linting, and deployments automatically. |
+| **Nginx / Gunicorn** | Used for serving the application and handling HTTP requests efficiently. |
+
+---
+
+## 🗄️ Database Design
+
+### **Key Entities and Fields**
+1. **User**
+   - id (PK)
+   - username
+   - email
+   - password
+   - role (host or guest)
+
+2. **Property**
+   - id (PK)
+   - user_id (FK → User)
+   - title
+   - description
+   - price_per_night
+   - location
+
+3. **Booking**
+   - id (PK)
+   - user_id (FK → User)
+   - property_id (FK → Property)
+   - check_in_date
+   - check_out_date
+   - total_price
+
+4. **Review**
+   - id (PK)
+   - user_id (FK → User)
+   - property_id (FK → Property)
+   - rating
+   - comment
+
+5. **Payment**
+   - id (PK)
+   - booking_id (FK → Booking)
+   - amount
+   - payment_method
+   - payment_status
+
+### **Relationships**
+- A **User** can list multiple **Properties**.  
+- A **Property** can have multiple **Bookings**.  
+- A **Booking** belongs to one **User** and one **Property**.  
+- A **User** can leave multiple **Reviews** for different properties.  
+- A **Payment** belongs to a **Booking**.
+
+---
+
+## 🌟 Feature Breakdown
+
+| Feature | Description |
+|----------|--------------|
+| **User Management** | Handles user registration, authentication, and profile management. |
+| **Property Management** | Allows hosts to list, edit, and manage properties. |
+| **Booking System** | Enables guests to search, book, and manage reservations. |
+| **Payment Processing** | Integrates secure payment systems for booking transactions. |
+| **Review System** | Allows guests to leave reviews and ratings for properties. |
+| **Search and Filter** | Provides filters by location, price, and property type for an improved user experience. |
+
+---
+
+## 🔐 API Security
+
+### **Security Measures**
+- **Authentication & Authorization:**  
+  Secure user login via JWT (JSON Web Token) or OAuth2 to verify identity.
+- **Rate Limiting:**  
+  Prevents abuse of API endpoints by limiting requests per user/IP.
+- **Input Validation:**  
+  Ensures all incoming data is sanitized to prevent SQL injection or XSS.
+- **Data Encryption:**  
+  Sensitive information (like passwords) stored using hashing (e.g., bcrypt).
+- **Secure Payments:**  
+  Use SSL/TLS encryption for all payment and transaction requests.
+
+### **Why It Matters**
+- Protects user data and prevents unauthorized access.  
+- Maintains platform trust and compliance with data protection standards.  
+- Secures financial transactions and prevents fraud.
+
+---
+
+## ⚙️ CI/CD Pipeline
+
+### **Overview**
+CI/CD (Continuous Integration / Continuous Deployment) pipelines automate code testing, building, and deployment — ensuring consistent and efficient development workflows.
+
+### **Pipeline Flow**
+1. **Commit & Push** → Developer pushes code to GitHub.  
+2. **GitHub Actions** → Automatically runs tests, code linting, and builds.  
+3. **Docker Build** → Creates containerized app images.  
+4. **Deployment** → Automatically deploys to staging or production servers.
+
+### **Tools**
+- **GitHub Actions** for automation.  
+- **Docker** for consistent build environments.  
+- **Nginx / AWS / Heroku** for deployment.  
+
+**Author:** *Lateef Emmanuel Babatunde*  
+**Role:** Film Editor • Animator • Creative Technologist  
+**Location:** Lagos, Nigeria  
+**Course:** ProDev Backend
+
+---
+
+

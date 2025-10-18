@@ -28,13 +28,13 @@ Through this project, I explore how **media creativity** and **frontend engineer
 ---
 
 ## 🛠️ Tech Stack
-| Category              | Tools / Technologies |
-|---------------------------------------------------|
-| Frontend              | HTML, CSS, JavaScript (React) |
-| Version Control       | Git, GitHub |
-| Design                | Figma |
-| Project Management    | Agile / Scrum Practices |
-| Documentation         | Markdown (README.md) |
+| Category   | Tools / Technologies |
+|-----------------------------------------|
+| Frontend  | HTML, CSS, JavaScript (React) |
+| Version Control | Git, GitHub |
+| Design | Figma |
+| Project Management | Agile / Scrum Practices |
+| Documentation  | Markdown (README.md) |
 
 ---
 
